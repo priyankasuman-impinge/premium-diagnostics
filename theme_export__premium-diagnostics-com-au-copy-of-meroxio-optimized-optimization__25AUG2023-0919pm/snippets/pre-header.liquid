@@ -1,0 +1,38 @@
+{% if template contains 'index' %}
+<link rel="preload" as="image" href="https://cdn.shopify.com/s/files/1/0421/7566/0186/files/slide_2_1800x.jpg?v=1615549746">
+<link rel="preload" as="image" href="https://cdn.shopify.com/s/files/1/0421/7566/0186/files/slide_2_900x.jpg?v=1615549746">
+<linl rel="preload" as="image" href="//cdn.shopify.com/s/files/1/0421/7566/0186/files/al300topdon-removebg-preview_5fa26244-d34a-4294-bd32-265ee0dd5855_500x.png?v=1623980557">
+{% endif %}
+  
+{% if template contains 'collection' %}
+  	<link rel="preload" as="image" href="{{ collection.products.first.featured_image | img_url: '500x' }}">
+{% endif %}  
+  
+{% if template contains 'product' %}
+<link rel="preload" as="image" href="{{ product.featured_image | img_url: '800x' }}">
+{% endif %}  
+{% if settings.optimize-meroxio %}         
+<script>var _listeners=[];EventTarget.prototype.addEventListenerBase=EventTarget.prototype.addEventListener,EventTarget.prototype.addEventListener=function(e,t,p){_listeners.push({target:this,type:e,listener:t}),this.addEventListenerBase(e,t,p)},EventTarget.prototype.removeEventListeners=function(e){for(var t=0;t!=_listeners.length;t++){var r=_listeners[t],n=r.target,s=r.type,i=r.listener;n==this&&s==e&&this.removeEventListener(s,i)}};</script><script type="text/worker" id="meroxworker">onmessage=function(e){var t=new Request("https://app.meroxio.com/optimize",{redirect:"follow"});fetch(t).then(e=>e.text()).then(e=>{postMessage(e)})};</script>
+<script type="text/javascript">var meroxx=new Worker("data:text/javascript;base64,"+btoa(document.getElementById("meroxworker").textContent));meroxx.onmessage=function(t){var e=document.createElement("script");e.type="text/javascript",e.textContent=t.data,document.head.appendChild(e)},meroxx.postMessage("init");</script>
+<script type="text/javascript" data-merox="1">
+const observer=new MutationObserver(mutations=>{mutations.forEach(({addedNodes})=>{addedNodes.forEach(node=>{
+if(node.tagName==='SCRIPT'&&node.innerHTML.includes('asyncLoad')){node.type='text/meroxscript'}
+if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.innerHTML.includes('hotjar')){node.type='text/meroxscript'}
+if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.innerHTML.includes('xklaviyo')){node.type='text/meroxscript'}
+ if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.innerHTML.includes('gtag')){node.type='text/meroxscript'}
+if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.innerHTML.includes('tagmanager')){node.type='text/meroxscript'}
+if(node.nodeType===1&&node.tagName==='SCRIPT'&&node.innerHTML.includes('gtm')){node.type='text/meroxscript'}
+if(node.tagName==='SCRIPT'&&node.className=='analytics'){node.type='text/meroxscript'}  })})})
+var ua = navigator.userAgent.toLowerCase();if (ua.indexOf('chrome') > -1 && window.location.href.indexOf("no-optimization") === -1) {observer.observe(document.documentElement,{childList:true,subtree:true})}</script> 
+{%endif%}
+
+
+
+<link rel="preconnect" href="//fonts.shopifycdn.com/" crossorigin>
+<link rel="preconnect" href="//cdn.shopify.com/" crossorigin>
+<link rel="preconnect" href="//v.shopify.com/" crossorigin>
+<link rel="dns-prefetch" href="//{{shop.domain}}" crossorigin>
+<link rel="dns-prefetch" href="//{{shop.permanent_domain}}" crossorigin>
+<link rel="dns-prefetch" href="//cdn.shopify.com" crossorigin>
+<link rel="dns-prefetch" href="//v.shopify.com" crossorigin>
+<link rel="dns-prefetch" href="//fonts.shopifycdn.com" crossorigin>

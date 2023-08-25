@@ -1,0 +1,356 @@
+{% capture content %}
+<!doctype html>
+<html lang="{{ shop.locale }}">
+<head>
+  <meta name="yandex-verification" content="5b6d71332827ef5e" />
+  <meta name="msvalidate.01" content="F7A0E4E5D7A6E6FFD901B34FDD53ED2E" />
+ <!-- Google tag (gtag.js) -->
+<script async data-src="https://www.googletagmanager.com/gtag/js?id=G-7R8W2R6QN2"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7R8W2R6QN2');
+</script> 
+   {%- if settings.favicon != blank -%}<link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">{%- endif -%}
+    {%- if settings.favicon_retina != blank -%}<link rel="apple-touch-icon-precomposed" type="image/png" sizes="152x152" href="{{ settings.favicon_retina | img_url: '152x' }}">{%- endif -%}
+  
+  
+<meta name="google-site-verification" content="8ZG1nswwhY-QeShv6T2UCwcLYx_fDhxTOAx4Kh9TD7Q" />
+  <!-- Google Tag Manager -->
+<script type="lazyload2">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWCTVSM');</script>
+<!-- End Google Tag Manager -->
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async type="lazyload2" data-src="https://www.googletagmanager.com/gtag/js?id=UA-176239729-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-176239729-1');
+</script>
+
+  
+  {% include 'social-meta-info' %}
+{% comment %}   {% render 'pre-header' %}
+   {% render 'yett' %} {% endcomment %}
+  <meta charset="utf-8">
+  <meta http-equiv="cleartype" content="on">
+  <meta name="robots" content="index,follow">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="{{ settings.shop_bg_color }}">
+
+ {% if product.handle == "launch-x431-v-pro-v4-0-bi-directional-diagnostic-scan-tool" %}
+
+    <link rel="canonical" href="launch-x431-v-with-truck-hd-24v-module-diagnostic-scan-tool-full-system-ecu-coding"/>
+
+    {% elsif product.handle == "livetrack-stealth-gps-tracker" %}
+
+    <link rel="canonical" href="livetrack-nomad-portable-gps-tracker"/>
+
+    {% elsif product.handle == "launch-x431-crp123x-scan-tool" %}
+
+    <link rel="canonical" href="launch-crp129x-obd2-car-diagnostic-scan-tool"/>
+
+    {% elsif product.handle == "solar-powered-tyre-pressure-monitoring-system-trucks-motorhomes-tpms" %}
+
+    <link rel="canonical" href="solar-powered-tyre-pressure-monitoring-system-car-4wd-tpms"/>
+
+ {% elsif product.handle == "solar-powered-tyre-pressure-monitoring-system-internal-sensors" %}
+
+    <link rel="canonical" href="solar-powered-tyre-pressure-monitoring-system-car-4wd-tpms"/>
+    
+  {{ elsif }}
+
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {% endif %}
+
+  
+  {%- if current_tags -%}{%- assign meta_tags = current_tags | join: ', ' -%}{%- endif -%}
+  <title>{%- if template contains "index" -%}{{ page_title }}{%- else -%}{{ page_title }}{% if current_tags %} {{ 'general.meta.tagged_html' | t: tags: meta_tags }}{%- endif -%}{% if current_page != 1 %} {{ 'general.meta.page' | t: page_number: current_page }}{% endif %}{% unless page_title contains shop.name %} {% endunless %}{% endif %}</title>
+
+  {% if current_tags %}
+  	<meta name="robots" content="noindex">
+  {% endif %}
+  
+  <link rel="preconnect dns-prefetch" href="https://fonts.shopifycdn.com" />
+  <link rel="preconnect dns-prefetch" href="https://cdn.shopify.com" />
+  <link rel="preconnect dns-prefetch" href="https://v.shopify.com" />
+  <link rel="preconnect dns-prefetch" href="https://cdn.shopifycloud.com" />
+
+   
+  {% if settings.enable_shopify_review_comments %}
+    <link rel="preconnect dns-prefetch" href="https://productreviews.shopifycdn.com" />
+  {% endif %}
+  {{ 'splide.js' | asset_url | script_tag }}
+  <link rel="preload" href="{{ 'fancybox.css' | asset_url }}" as="style">
+  <link rel="preload" href="{{ 'styles.scss.css' | asset_url }}" as="style">
+  {{ 'fancybox.css' | asset_url | stylesheet_tag }}
+  <!-- Stylesheets for Flex "1.1.2" -->
+  {{ 'styles.scss.css' | asset_url | stylesheet_tag }}
+
+  {% if settings.show_multiple_currencies or shop.enabled_currencies.size > 1 %}
+    <script type="text/javascript" src="/services/javascripts/currencies.js" ></script>
+  {% endif %}
+  <script>
+    {% include 'js-variables' %}
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script defer src="{{ 'vendors.js' | asset_url }}"></script>
+  <script defer src="{{ 'utilities.js' | asset_url }}"></script>
+  <script defer src="{{ 'app.js' | asset_url }}"></script>
+
+  {%- if settings.show_multiple_currencies or shop.enabled_currencies.size > 1 -%}
+    <script defer src="{{ 'currencyConversion.js' | asset_url }}"></script>
+  {%- endif -%}
+
+  {%- if settings.enable_shipping_calculator and template contains "cart" -%}
+    <script defer type="text/javascript" src="{{ 'shopify_common.js' | shopify_asset_url }}"></script>
+    <script defer type="text/javascript" src="{{ 'api.jquery.js' | shopify_asset_url }}"></script>
+    <script defer type="text/javascript" src="/services/javascripts/countries.js"></script>
+  {%- endif -%}
+
+  <noscript>
+    <style>
+      /* Insert styles for styles when JS is not loaded */
+    </style>
+  </noscript>
+
+  {%- if page_description -%}
+    <meta name="description" content="{{ page_description | escape }}{% if current_tags %} {{ 'general.meta.tagged_html' | t: tags: meta_tags | escape }}.{% endif %}{% if current_page != 1 %} {{ 'general.meta.page' | t: page_number: current_page }}.{% endif %}" />
+  {%- endif -%}
+
+   
+  {%- if template.directory == 'customers' -%}
+    <script defer src="{{ 'shopify_common.js' | shopify_asset_url }}"></script>
+    <script defer src="{{ 'customer_area.js' | shopify_asset_url }}"></script>
+  {%- endif -%}
+
+
+ {%- if request.design_mode or template contains 'cart' or template contains 'checkout' -%}
+            
+    {{ content_for_header }}
+        {%- else -%}
+            {% capture content_for_header2 %}{{ content_for_header }}{% endcapture %}
+            {{ content_for_header2 | replace: ' defer="defer" ', ' type="lazyload2" ' | replace: " src=", " data-src=" | replace: "window.addEventListener('load', asyncLoad, false);", "window.addEventListener('wnw_load', asyncLoad, false);" | replace: "DOMContentLoaded", "DOMContentLoaded2" }}
+            <script>var trekkie=[];trekkie.integrations=!0;</script>
+        {%- endif -%}
+
+
+  {% include 'tipo.booking.script' %}
+
+  {% if collection.previous_product %}<link rel="prev" href="{{ collection.previous_product }}">{% endif %}
+  {% if collection.next_product %}<link rel="next" href="{{ collection.next_product }}">{% endif %}
+  
+   <!-- Google Tag Manager -->
+<script type="lazyload2">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MRJJ5BJ');</script>
+<!-- End Google Tag Manager -->  
+    
+
+  {% render 'bookthatapp-widgets' %}
+</head>
+
+{% if template.name == 'index' %}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": "{{ shop.name }}",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ shop.url }}/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "url": "{{ shop.url }}{{ page.url }}"
+    }
+  </script>
+{% endif %}
+
+<body class="{%- if template == '404' -%}
+              error-404
+            {% else -%}
+              {{ template | replace: '.', '-' | handle }}
+            {%- endif -%}
+            {% if settings.header_layout == 'vertical' -%}
+              has-vertical-header
+            {%- endif -%}"
+  data-money-format="{{ shop.money_format }}" data-shop-url="{{ shop.url }}">
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWCTVSM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  {%- if settings.show_announcement_bar -%}
+    {% section 'announcement-bar' %}
+  {%- endif -%}
+
+  {%- if settings.header_layout == "classic" -%}
+    {% section 'header__top-bar' %}
+    {% section 'header-classic' %}
+  {%- elsif settings.header_layout == "centered" -%}
+    {% section 'header-centered__top-bar' %}
+    {% section 'header-centered' %}
+  {%- elsif settings.header_layout == "vertical" -%}
+    {% section 'header-vertical' %}
+  {%- elsif settings.header_layout == "search_focus" -%}
+    {% section 'header__top-bar' %}
+    {% section 'header-search-focus' %}
+  {%- endif -%}
+
+  {%- if settings.cart_action == 'drawer' -%}
+    {% include 'ajax-cart' %}
+  {%- endif -%}
+
+  {% if settings.mega_menu_1 == true %}
+    {% section 'mega-menu-1' %}
+  {% endif %}
+  {% if settings.mega_menu_2 == true %}
+    {% section 'mega-menu-2' %}
+  {% endif %}
+  {% if settings.mega_menu_3 == true %}
+    {% section 'mega-menu-3' %}
+  {% endif %}
+  {% if settings.mega_menu_4 == true %}
+    {% section 'mega-menu-4' %}
+  {% endif %}
+  {% if settings.mega_menu_5 == true %}
+    {% section 'mega-menu-5' %}
+  {% endif %}
+  {% if settings.mega_menu_6 == true %}
+    {% section 'mega-menu-6' %}
+  {% endif %}
+  {% if settings.mega_menu_7 == true %}
+    {% section 'mega-menu-7' %}
+  {% endif %}
+  {% if settings.mega_menu_8 == true %}
+    {% section 'mega-menu-8' %}
+  {% endif %}
+  {% if settings.mega_menu_9 == true %}
+    {% section 'mega-menu-9' %}
+  {% endif %}
+  {% if settings.mega_menu_10 == true %}
+    {% section 'mega-menu-10' %}
+  {% endif %}
+
+  {% if settings.header_layout == "vertical" %}
+    <div class="is-beside-vertical-header">
+  {% endif %}
+
+  {{ content_for_layout }}
+
+  {% if settings.footer_layout == "centered" %}
+    {% section 'footer__icon-bar' %}
+    {% section 'footer-centered' %}
+  {% elsif settings.footer_layout == "classic" %}
+    {% section 'footer__icon-bar' %}
+    {% section 'footer-classic' %}
+  {% elsif settings.footer_layout == "promotional" %}
+    {% section 'footer__icon-bar' %}
+    {% section 'footer-promotional' %}
+  {% endif %}
+
+  {% if settings.header_layout == "vertical" %}
+    </div>
+  {% endif %}
+
+  {% if settings.show_fixed_message %}
+    {% section 'fixed-message' %}
+  {% endif %}
+
+  {% if settings.enable_quickshop %}
+    {% include 'quick-shop' %}
+  {% endif %}
+
+  {% if settings.search_display_style == 'popup' %}
+    {% include 'search-popup' %}
+  {% endif %}
+
+  {% if settings.show_popup %}
+    {% section 'popup' %}
+  {% endif %}
+
+
+  {% if settings.disqus_enabled %}
+    {% if template contains "blog" or template contains "article" or template contains "index" %}
+      <script id="dsq-count-scr" src="//{{ settings.disqus_shortname }}.disqus.com/count.js" async></script>
+    {% endif %}
+  {% endif %}
+
+{% include 'th-product-review' %}
+    
+  
+
+  
+  
+
+<!-- **BEGIN** Hextom CTB Integration // Main Include - DO NOT MODIFY -->
+    {% render 'hextom_ctb_main', product: product, customer: customer %}
+    <!-- **END** Hextom CTB Integration // Main Include - DO NOT MODIFY -->
+
+<!-- **BEGIN** Hextom USB Integration // Main Include - DO NOT MODIFY -->
+    {% render 'hextom_usb_main', product: product, customer: customer %}
+    <!-- **END** Hextom USB Integration // Main Include - DO NOT MODIFY -->
+  
+  <script>
+    var isReplaced = false;       
+    function MeroxIO_Function(){
+      if(!isReplaced){
+        window.yett.unblock();
+        console.log("apps lazyloaded successfully");
+        isReplaced=true;
+      }
+    }      
+    document.addEventListener("click", MeroxIO_Function);
+    document.addEventListener("scroll", MeroxIO_Function);
+    document.addEventListener("touchstart", MeroxIO_Function);
+    document.addEventListener("mousemove", MeroxIO_Function);
+</script>
+  
+
+    
+<!-- **BEGIN** Hextom QAB Integration // Main Include - DO NOT MODIFY -->
+    {% render 'hextom_qab_main', product: product, customer: customer %}
+    <!-- **END** Hextom QAB Integration // Main Include - DO NOT MODIFY -->
+<script type="lazyload2" data-src="https://cdn.hextom.com/js/ultimatesalesboost.js?shop=premium-diagnostics.myshopify.com"></script>
+ {{'source.js' | asset_url | script_tag }} </body>
+</html>
+{% endcapture %}
+{% assign content = content | replace_first: '<!doctype', '!doctype' | split: ' <' %}
+{%- for html in content -%}{%- assign htmlblock = html | strip | prepend: ' <' -%}{{htmlblock | replace: ' </', '</'}}{%- endfor -%}
+
+<!-- Begin Shopify-Afterpay JavaScript Snippet (v1.0.10) -->
+<script type="text/javascript">
+// Overrides:
+// var afterpay_min = 0.04;            // As per your Afterpay contract.
+// var afterpay_max = 2000.00;         // As per your Afterpay contract.
+// var afterpay_cbt_enabled = false;   // As per your Afterpay contract; change to true to display Cross-Border Trade artwork (for AU/NZ).
+// var afterpay_logo_theme = 'colour'; // Can be 'colour', 'black' or 'white'.
+// var afterpay_product_selector = '#product-price-selector';
+// var afterpay_cart_integration_enabled = true;
+// var afterpay_cart_static_selector = '#cart-subtotal-selector';
+
+// Non-editable fields:
+var afterpay_shop_currency = {{ shop.currency | json }};
+var afterpay_cart_currency = {{ cart.currency.iso_code | json }};
+var afterpay_shop_money_format = {{ shop.money_format | json }};
+var afterpay_shop_permanent_domain = {{ shop.permanent_domain | json }};
+var afterpay_theme_name = {{ theme.name | json }};
+var afterpay_product = {{ product | json }};
+var afterpay_current_variant = {{ product.selected_or_first_available_variant | json }};
+var afterpay_cart_total_price = {{ cart.total_price | json }};
+var afterpay_js_snippet_version = '1.0.10';
+</script>
+<script type="lazyload2" data-src="https://static.afterpay.com/shopify-afterpay-javascript.js"></script>
+<!-- End Shopify-Afterpay JavaScript Snippet (v1.0.10) -->
